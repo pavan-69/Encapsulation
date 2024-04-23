@@ -1,0 +1,47 @@
+1. Encapsulation is a mechanism to hide information from the client. The information may be data or implementation or algorithm. We achieve this using access modifiers. 
+
+2. Data hiding
+  Increase flexibility
+  Reusability
+  Testing code is easy
+  
+
+3. Getter in Java: Getter returns the value (accessors), it returns the value of data type int, String, double, float, etc. For the program’s convenience, the getter starts with the word “get” followed by the variable name.
+
+Setter in Java: While Setter sets or updates the value (mutators). It sets the value for any variable used in a class’s programs. and starts with the word “set” followed by the variable name. 
+
+4. Invoke current class constructor
+Invoke current class method
+Return the current class object
+Pass an argument in the method call
+Pass an argument in the constructor call
+
+5. Data Protection: The program runner will not be able to identify or see which methods are present in the code. Therefore he/she doesn’t get any chance to change any specific variable or data and hinder the running of the program.
+Flexibility: The code which is encapsulated looks more cleaner and flexible, and can be changed as per the needs. We can change the code read-only or write-only by getter and setter methods. This also helps in debugging the code if needed.
+Reusability: The methods can be changed and the code is reusable.
+
+6. class Person {
+       private String name;
+    private int age;
+ 
+    public String getName() { return name; }
+ 
+    public void setName(String name) { this.name = name; }
+ 
+    public int getAge() { return age; }
+ 
+    public void setAge(int age) { this.age = age; }
+}
+ 
+public class Main {
+
+    public static void main(String[] args)
+    {
+                Person person = new Person();
+        person.setName("John");
+        person.setAge(30);
+ 
+                System.out.println("Name: " + person.getName());
+        System.out.println("Age: " + person.getAge());
+    }
+}
